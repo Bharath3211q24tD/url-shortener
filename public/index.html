@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <h1>URL Shortener</h1>
+        <p>Shorten links, check stats, and view the real-time leaderboard.</p>
+      </section>
+
+      <section class="card">
+        <h2>Shorten a URL</h2>
+        <form id="shorten-form">
+          <input id="longUrl" type="url" placeholder="Enter a long URL" required />
+          <button type="submit">Shorten</button>
+        </form>
+        <div id="shorten-result" class="result"></div>
+      </section>
+
+      <section class="card">
+        <h2>Leaderboard</h2>
+        <div id="leaderboard-loading">Loading top URLs…</div>
+        <table id="leaderboard-table" hidden>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Short Code</th>
+              <th>Long URL</th>
+              <th>Clicks</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>URL Stats</h2>
+        <form id="stats-form">
+          <input id="statsCode" type="text" placeholder="Enter short code" required />
+          <button type="submit">Get Clicks</button>
+        </form>
+        <div id="stats-result" class="result"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
